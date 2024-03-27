@@ -126,7 +126,7 @@ let data = [
 
     {
         network: 'testnet',
-        website: '',
+        website: 'https://twitter.com/its_airdrop/status/1772640533728379064',
         name: 'OG labs',
         img: 'https://0g.ai/zg-logo.svg'
     }
