@@ -7,7 +7,9 @@ nav{
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
-    color:white
+    color:white;
+    flex-wrap: wrap;
+    max-width:100%;
 }
 .dashboard{
     display:none;
@@ -40,6 +42,7 @@ nav{
     width:40%;
     font-weight: lighter;
     font-size: smaller;
+    flex-wrap: wrap;
 
 }
 .menu li {
@@ -52,13 +55,42 @@ nav{
     cursor:pointer;
     list-style-position: inside;
 }
+
+.search{
+    display:flex;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 300px;
+    font-weight: lighter;
+}
+.search-bar{
+    width: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px) grey; /* Apply blur effect to the background */
+}
+
+.search-btn{
+ 
+  background-color: rgba(98, 164, 239, 0.2); /* Transparent white */
+  border: none;
+  border-radius: 20px;
+  color: rgb(55, 55, 245);
+  cursor: pointer;
+  font-size: 8px;
+  font-weight: lighter;
+}
 .main{
     width:85%;
-    margin:50px auto;
+    margin: auto;
     padding:20px;
     display:grid;
     gap:15px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     background:rgb(42, 42, 54);
 
 }

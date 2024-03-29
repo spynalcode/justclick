@@ -54,9 +54,19 @@ function displayTestnet(){
             link.click();
             
         })
+        div.addEventListener('mouseover', ()=>{
+            div.style.opacity = '0.5'
+        })
     
         document.querySelector('.main').appendChild(div)
     }}
+}
+
+function search(input){
+    const main = document.querySelector('.main');
+    main.innerHTML = '';
+    const matchingResult = data.filter(item => item.name.toLowerCase().includes(input.toLowerCase()));
+    main.innerHTML = matchingResult.name
 }
 
 function displayMainnet(){
