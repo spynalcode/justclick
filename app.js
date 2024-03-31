@@ -31,6 +31,9 @@ function displayAll(){
 displayAll()
 
 
+document.querySelector('.logo-container').addEventListener('click', ()=>{
+    displayAll()
+})
 function displayTestnet(){
     document.querySelector('.main').innerHTML = ''
     for(let details of data){
@@ -54,20 +57,21 @@ function displayTestnet(){
             link.click();
             
         })
-        div.addEventListener('mouseover', ()=>{
-            div.style.opacity = '0.5'
-        })
     
         document.querySelector('.main').appendChild(div)
     }}
 }
 
-function search(input){
-    const main = document.querySelector('.main');
-    main.innerHTML = '';
-    const matchingResult = data.filter(item => item.name.toLowerCase().includes(input.toLowerCase()));
-    main.innerHTML = matchingResult.name
-}
+// function search(input){
+//     const main = document.querySelector('.main');
+//     main.innerHTML = '';
+//     const matchingResult = data.filter(item => item.name.toLowerCase().includes(input.toLowerCase()));
+//     main.innerHTML = matchingResult.name
+// }
+
+// document.querySelector('.search-btn').addEventListener('click', (e)=>{
+//     search(e)
+// })
 
 function displayMainnet(){
     document.querySelector('.main').innerHTML = ''
