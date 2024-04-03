@@ -106,7 +106,7 @@ nav{
     display: flex;
     text-align: center;
     align-items: center;
-    background:rgb(11, 11, 11);
+    background: rgb(61, 60, 55);
     animation:reverse;
 }
 .color:hover{
