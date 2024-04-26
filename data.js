@@ -223,6 +223,13 @@ let data = [
         webstite:'https://www.google.com',
         name:'mint BlockChain',
         img:'https://pbs.twimg.com/profile_images/1783320986093588480/uhUB3xKT_400x400.jpg'
+    },
+
+    {
+        network:'testnet',
+        website:'https://app.galxe.com/quest/privasea/',
+        name: 'Privasea',
+        img:'https://cdn.galxe.com/galaxy/89df8748825e4d0086db00b4d29759ae/.jpeg_thumbnail.webp'
     }
     
 
