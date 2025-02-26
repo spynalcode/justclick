@@ -6,14 +6,39 @@ function displayAll(){
     document.querySelector('.main').innerHTML = ''
     for(let details of data){
         let div = document.createElement('div')
-        div.classList.add('color')
-        div.style.backgroundImage = `url(${details.img})`;
-        div.style.backgroundSize = 'contain'
-        div.style.backgroundRepeat = 'no-repeat';
-        div.style.backgroundPositionX = 'center';
-        div.style.backgroundPositionY = 'center';
+        let divName = document.createElement('div')
+        let divLink = document.createElement('div');
+        let divRaised = document.createElement('div')
+
+
+        divName.textContent = details.name;
+        divName.style.fontSize = '15px'
+
+        divLink.classList.add('link')
+
+        divRaised.textContent = `Total Raised: ${details.raised? details.raised : 'Nil'}`
+        divRaised.classList.add('amount')
+
+
+
+        divLink.textContent = 'detailed step-by-step guide';
+        divLink.style.color ='#2bbdc7';
+        divLink.style.fontSize = '15px';
+        divLink.style.textDecoration = 'underline';
+        divLink.style.cursor = 'grab'
         
-        div.addEventListener('click', ()=>{
+
+        div.classList.add('deets');
+        div.classList.add('glass')
+        let div1 = document.createElement('div')
+        div1.classList.add('color')
+        div1.style.backgroundImage = `url(${details.img})`;
+        div1.style.backgroundSize = 'contain'
+        div1.style.backgroundRepeat = 'no-repeat';
+        div1.style.backgroundPositionX = 'center';
+        div1.style.backgroundPositionY = 'center';
+        
+        divLink.addEventListener('click', ()=>{
            
             var link = document.createElement('a');
             // Set the href attribute to the path of your local HTML file
@@ -25,7 +50,12 @@ function displayAll(){
             
         })
     
-        document.querySelector('.main').appendChild(div)
+        document.querySelector('.main').appendChild(div).appendChild(div1)
+        document.querySelector('.main').appendChild(div).appendChild(divName)
+        document.querySelector('.main').appendChild(div).appendChild(divLink)
+        document.querySelector('.main').appendChild(div).appendChild(divRaised)
+
+       
     }
 }
 displayAll()
