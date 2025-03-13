@@ -32,7 +32,7 @@ function displayAll(){
         div.classList.add('glass')
         let div1 = document.createElement('div')
         div1.classList.add('color')
-        div1.style.backgroundImage = details.img?`url(${details.img})`:(div1.textContent = details.name);
+        div1.style.backgroundImage = details.img?`url(${details.img})`:(div1.textContent = details.namet);
         div1.style.backgroundSize = 'contain'
         div1.style.backgroundRepeat = 'no-repeat';
         div1.style.backgroundPositionX = 'center';
